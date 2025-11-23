@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { TextReveal } from "@/components/ui/shadcn-io/text-reveal"
+import TypingText from "@/components/ui/shadcn-io/typing-text"
 import "../index.css";
 
 const Hero = () => {
@@ -17,13 +19,36 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText}`}>
+          {/* <h1 className={`${styles.heroHeadText}`}>
             Hi, I'm <span className='text-[#915EFF]'>Aolin</span>
+          </h1> */}
+          <h1 className={`${styles.heroHeadText}`}>
+            <TypingText
+              segments={[
+                { text: "Hi, I'm ", color: "#dfd9ff" },
+                { text: "Aolin", color: "#915EFF" }
+              ]}
+              className=""
+              typingSpeed={80}
+              showCursor={true}
+              cursorCharacter="_"
+              loop={false}
+              hideCursorOnComplete={true}
+            />
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop Software, business <br className='sm:block hidden' />
-            and the future!
-          </p>
+
+          <div className={`${styles.heroSubText} mt-2`}>
+            <TypingText
+              text="I develop Software, business and the future!"
+              typingSpeed={50}
+              showCursor={true}
+              cursorCharacter="_"
+              loop={false}
+              initialDelay={1600}
+              className="text-[#dfd9ff]"
+              hideCursorOnComplete={false}
+            />
+          </div>
         </div>
       </div>
 
