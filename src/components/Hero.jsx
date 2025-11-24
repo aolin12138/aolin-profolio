@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      {/* <ComputersCanvas /> */}
 
       <div className='absolute bottom-2 w-full flex justify-center items-center'>
         <a href='#about' className='flex flex-col items-center gap-0' style={{ lineHeight: 0 }}>

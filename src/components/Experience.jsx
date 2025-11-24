@@ -6,6 +6,7 @@ import { textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import "react-vertical-timeline-component/style.min.css";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import TextPressureSimple from "./ui/TextPressureSimple";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -53,9 +54,13 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Experience</p>
-        <h2 className={styles.sectionHeadText}>
-          Work Experience.
-        </h2>
+        <div className="h-[60px] w-full relative z-10">
+          <TextPressureSimple
+            text="Work Experience."
+            minFontSize={60}
+            textColor="#FFFFFF"
+          />
+        </div>
       </motion.div>
 
       <div className='mt-20 flex flex-col gap-6'>

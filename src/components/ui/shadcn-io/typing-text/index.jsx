@@ -75,10 +75,10 @@ const TypingText = ({
     if (showCursor && cursorRef.current && hasStarted) {
       // Kill any existing animations
       gsap.killTweensOf(cursorRef.current);
-      
+
       // Set initial state
       gsap.set(cursorRef.current, { opacity: 1 });
-      
+
       // Start blinking animation
       gsap.to(cursorRef.current, {
         opacity: 0,
@@ -88,7 +88,7 @@ const TypingText = ({
         ease: 'power2.inOut'
       });
     }
-    
+
     return () => {
       if (cursorRef.current) {
         gsap.killTweensOf(cursorRef.current);
@@ -223,8 +223,8 @@ const TypingText = ({
     <span
       ref={cursorRef}
       className={`inline-block opacity-100 ${shouldHideCursor ? 'hidden' : ''} ${cursorCharacter === '|'
-          ? `h-5 w-[1px] translate-y-1 bg-foreground ${cursorClassName}`
-          : `ml-1 ${cursorClassName}`
+        ? `h-5 w-[1px] translate-y-1 bg-foreground ${cursorClassName}`
+        : `ml-1 ${cursorClassName}`
         }`}>
       {cursorCharacter === '|' ? '' : cursorCharacter}
     </span>

@@ -49,8 +49,6 @@ const Navbar = () => {
 
         const absoluteBottom = absoluteTop + section.offsetHeight;
 
-        console.log('Section:', link.title, 'Top:', absoluteTop, 'Bottom:', absoluteBottom, 'Trigger:', triggerPoint, 'Height:', section.offsetHeight);
-
         // Check if trigger point is inside this section
         if (triggerPoint >= absoluteTop && triggerPoint < absoluteBottom) {
           currentSection = link.title;
