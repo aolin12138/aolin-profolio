@@ -106,8 +106,6 @@ const TextPressure = ({
         const titleRect = titleRef.current.getBoundingClientRect();
         const maxDist = titleRect.width / 2;
 
-        console.log('Animating - Mouse:', mouseRef.current, 'Title rect:', titleRect);
-
         spansRef.current.forEach(span => {
           if (!span) return;
 

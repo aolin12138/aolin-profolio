@@ -13,6 +13,11 @@ const Hero = () => {
       <div
         className={`absolute inset-0 top-[100px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
+
+        <img src="src/assets/avatar.png" alt="avatar"
+          className="h-80 object-cover mt-2"
+        />
+
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
@@ -54,7 +59,7 @@ const Hero = () => {
 
       {/* <ComputersCanvas /> */}
 
-      <div className='absolute bottom-2 w-full flex justify-center items-center'>
+      {/* <div className='absolute bottom-2 w-full flex justify-center items-center'>
         <a href='#about' className='flex flex-col items-center gap-0' style={{ lineHeight: 0 }}>
           <motion.div
             animate={{ opacity: [0, 1, 0.3, 0] }}
@@ -98,7 +103,7 @@ const Hero = () => {
             ›
           </motion.div>
         </a>
-      </div>
+      </div> */}
 
     </section>
   );

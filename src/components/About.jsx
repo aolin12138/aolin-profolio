@@ -6,7 +6,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-import TextPressureSimple from "./ui/TextPressureSimple";
+import TextPressureSimple from "@/components/ui/TextPressureSimple";
 
 const ServiceCard = ({ index, title, icon }) => {
   const cardRef = React.useRef(null);
@@ -87,11 +87,11 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <div className="h-[60px] w-full relative z-10">
+        <div className="w-full h-[60px] sm:h-[80px] md:h-[100px]">
           <TextPressureSimple
             text="Overview."
+            textColor="#ffffff"
             minFontSize={60}
-            textColor="#FFFFFF"
           />
         </div>
       </motion.div>

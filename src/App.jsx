@@ -5,24 +5,23 @@ import './index.css'
 
 import {
   About, Contact, Experience, Feedbacks,
-  Hero, Navbar, Tech, Works, StarsCanvas
+  Hero, Navbar, Tech, Works, StarsCanvas, NavigationControls
 } from "./components"
+
 const App = () => {
   return (
     <BrowserRouter className="pt-20">
       <div className='relative z-0 bg-primary'>
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <NavigationControls />
+        <StarsCanvas />
+        <div className="bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
         </div>
         <About />
         <Experience />
         <Tech />
-        <Works />
-        <div className='relative z-0'>
-          <Contact />
-          <StarsCanvas />
-        </div>
+        <Contact />
       </div>
     </BrowserRouter>
   )

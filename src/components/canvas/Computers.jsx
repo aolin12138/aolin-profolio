@@ -23,6 +23,9 @@ const Computers = ({ isMobile }) => {
   )
 };
 
+// Preload the model
+useGLTF.preload("./desktop_pc/scene.gltf");
+
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -46,9 +49,13 @@ const ComputersCanvas = () => {
       frameloop="demand"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{
+        preserveDrawingBuffer: true,
+        antialias: true,
+        powerPreference: "high-performance"
+      }}
     >
-      <Suspense>
+      <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
@@ -56,8 +63,6 @@ const ComputersCanvas = () => {
         />
         <Computers isMobile={isMobile} />
       </Suspense>
-
-      <Preload all />
     </Canvas>
   );
 }
