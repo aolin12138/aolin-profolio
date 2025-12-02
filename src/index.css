@@ -343,3 +343,48 @@
     scroll-snap-stop: always;
   }
 }
+
+  .icon-color-stack {
+    position: relative;
+    display: inline-flex;
+  }
+
+  .group .icon-gradient-layer {
+    position: absolute;
+    inset: 0;
+    color: var(--icon-hover-color, #ffffff);
+    opacity: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+    transition:
+      opacity var(--icon-out-duration, 0.4s) ease var(--icon-opacity-delay, 0s),
+      filter 0.5s ease;
+  }
+
+  .group:not(:hover) .icon-gradient-layer {
+    --icon-out-duration: 0.45s;
+    --icon-opacity-delay: 0.55s;
+  }
+
+  .icon-gradient-layer :is(path, circle, line, polyline, polygon, rect) {
+    stroke-dasharray: var(--icon-stroke-length, 120);
+    stroke-dashoffset: var(--icon-stroke-length, 120);
+    transition: stroke-dashoffset 1.4s ease;
+  }
+
+  .group:hover .icon-gradient-layer,
+  .group:focus-visible .icon-gradient-layer {
+    --icon-out-duration: 0.18s;
+    --icon-opacity-delay: 0s;
+    opacity: 1;
+    filter:
+      drop-shadow(0 0 4px var(--icon-glow-color, rgba(255, 255, 255, 0.45)))
+      drop-shadow(0 0 10px var(--icon-glow-color, rgba(255, 255, 255, 0.35)));
+  }
+
+  .group:hover .icon-gradient-layer :is(path, circle, line, polyline, polygon, rect),
+  .group:focus-visible .icon-gradient-layer :is(path, circle, line, polyline, polygon, rect) {
+    stroke-dashoffset: 0;
+  }
+
+ 

@@ -1,11 +1,12 @@
 import logo from "./logo.png";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
+import ai from "./ai.svg";
+import agent from "./agent.svg";
+import ml from "./ml.svg";
+import solver from "./solver.svg";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import prompt from "./prompt.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -32,10 +33,11 @@ import tripguide from "./tripguide.png";
 
 export {
   logo,
-  backend,
-  creator,
-  mobile,
-  web,
+  ai,
+  agent,
+  ml,
+  solver,
+  prompt,
   github,
   menu,
   close,

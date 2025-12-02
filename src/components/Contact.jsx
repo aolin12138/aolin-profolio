@@ -21,9 +21,43 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => { }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value })
+  }
 
-  const handleSubmit = (e) => { }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.send(
+      'service_usu13c8',
+      'template_7g0qptu',
+      {
+        from_name: form.name,
+        to_name: "Aolin",
+        from_email: form.email,
+        to_email: "aolin12138@gmail.com",
+        message: form.message,
+      },
+      '90k_6at-mzZiiHHVN'
+    )
+      .then(() => {
+        setLoading(false);
+        alert("Thank you. I will get back to you as soon as possible.");
+
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }, (error) => {
+        setLoading(false);
+        console.error(error);
+
+        alert("Ahh, something went wrong. Please try again.");
+      });
+  }
 
   return (
     <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
@@ -37,7 +71,8 @@ const Contact = () => {
             <TextPressureSimple
               text="Contact."
               textColor="#ffffff"
-              minFontSize={50}
+              minFontSize={60}
+              className="cursor-pointer"
             />
           </div>
         </motion.div>

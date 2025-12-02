@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="512" height="512" rx="110" fill="url(#gradSolve)"/>
+  <path d="M180 188H332C343.046 188 352 196.954 352 208V324C352 335.046 343.046 344 332 344H180C168.954 344 160 335.046 160 324V208C160 196.954 168.954 188 180 188Z" stroke="white" stroke-width="22"/>
+  <path d="M206 238H248" stroke="white" stroke-width="22" stroke-linecap="round"/>
+  <path d="M206 290H306" stroke="white" stroke-width="22" stroke-linecap="round"/>
+  <path d="M264 238H306" stroke="white" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="206" cy="238" r="16" fill="white"/>
+  <circle cx="206" cy="290" r="16" fill="white"/>
+  <circle cx="306" cy="238" r="16" fill="white"/>
+  <circle cx="306" cy="290" r="16" fill="white"/>
+  <path d="M262 352L292 404" stroke="white" stroke-width="20" stroke-linecap="round"/>
+  <path d="M250 352L220 404" stroke="white" stroke-width="20" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="gradSolve" x1="512" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9A44"/>
+      <stop offset="1" stop-color="#FC6076"/>
+    </linearGradient>
+  </defs>
+</svg>

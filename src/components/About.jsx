@@ -92,6 +92,8 @@ const About = () => {
             text="Overview."
             textColor="#ffffff"
             minFontSize={60}
+            introDuration={2600}
+            className="cursor-pointer"
           />
         </div>
       </motion.div>
@@ -101,12 +103,12 @@ const About = () => {
         className='mt-4 text-secondary text-[17px]
         max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in
-        TypeScript and JavaScript, and expertise in frameworks
-        like React, Node.js, and Three.js. I'm a quick learner
-        and collaborate closely with clients to create efficient,
-        scalable, and user-friendly solutions that solve real-world
-        problems. Let's work together to bring your ideas to life!
+        I'm an AI enthusiast who lives for machine learning experiments
+        and MCP-style agents. I love untangling messy, real-world
+        problems and turning them into products where AI and automation
+        do the heavy lifting. Give me a workflow, data set, or business
+        pain point and I'll prototype an agentic system that solves it,
+        explains itself, and keeps evolving.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10 items-center justify-center'>

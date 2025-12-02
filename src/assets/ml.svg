@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="512" height="512" rx="110" fill="url(#gradML)"/>
+  <path d="M150 330V182C150 172.059 158.059 164 168 164H344C353.941 164 362 172.059 362 182V330C362 339.941 353.941 348 344 348H168C158.059 348 150 339.941 150 330Z" stroke="white" stroke-width="22"/>
+  <path d="M214 208V304" stroke="white" stroke-width="22" stroke-linecap="round"/>
+  <path d="M256 236V304" stroke="white" stroke-width="22" stroke-linecap="round"/>
+  <path d="M298 260V304" stroke="white" stroke-width="22" stroke-linecap="round"/>
+  <path d="M182 284L214 248" stroke="white" stroke-width="18" stroke-linecap="round"/>
+  <path d="M256 242L214 282" stroke="white" stroke-width="18" stroke-linecap="round"/>
+  <path d="M298 238L256 278" stroke="white" stroke-width="18" stroke-linecap="round"/>
+  <path d="M330 234L298 262" stroke="white" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="182" cy="284" r="16" fill="white"/>
+  <circle cx="214" cy="248" r="16" fill="white"/>
+  <circle cx="256" cy="242" r="16" fill="white"/>
+  <circle cx="298" cy="238" r="16" fill="white"/>
+  <circle cx="330" cy="234" r="16" fill="white"/>
+  <defs>
+    <linearGradient id="gradML" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF6CAB"/>
+      <stop offset="1" stop-color="#7366FF"/>
+    </linearGradient>
+  </defs>
+</svg>
