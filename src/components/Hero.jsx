@@ -7,6 +7,9 @@ import { TextReveal } from "@/components/ui/shadcn-io/text-reveal"
 import TypingText from "@/components/ui/shadcn-io/typing-text"
 import "../index.css";
 
+// Import the bundled avatar asset from src/assets
+import avatar from "../assets/avatar.png";
+
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
@@ -14,7 +17,7 @@ const Hero = () => {
         className={`absolute inset-0 top-[100px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
 
-        <img src="src/assets/avatar.png" alt="avatar"
+        <img src={avatar} alt="avatar"
           className="h-80 object-cover mt-2"
         />
 

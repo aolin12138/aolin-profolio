@@ -4,8 +4,16 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
+// Normalize Vite BASE_URL once and reuse across module
+const getAssetBase = () => {
+  const base = typeof import.meta.env.BASE_URL === 'string' ? import.meta.env.BASE_URL : '/';
+  return base.endsWith('/') ? base : base + '/';
+};
+const ASSET_BASE = getAssetBase();
+
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computerPath = ASSET_BASE + 'desktop_pc/scene.gltf';
+  const computer = useGLTF(computerPath);
 
   return (
     <>
@@ -24,7 +32,7 @@ const Computers = ({ isMobile }) => {
 };
 
 // Preload the model
-useGLTF.preload("./desktop_pc/scene.gltf");
+useGLTF.preload(ASSET_BASE + 'desktop_pc/scene.gltf');
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);

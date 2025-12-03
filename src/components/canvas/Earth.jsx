@@ -4,8 +4,16 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
+// Normalize Vite BASE_URL once and reuse across module
+const getAssetBase = () => {
+  const base = typeof import.meta.env.BASE_URL === 'string' ? import.meta.env.BASE_URL : '/';
+  return base.endsWith('/') ? base : base + '/';
+};
+const ASSET_BASE = getAssetBase();
+
 const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
+  const earthPath = ASSET_BASE + 'planet/scene.gltf';
+  const earth = useGLTF(earthPath);
 
   return (
     <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
@@ -34,6 +42,9 @@ const EarthCanvas = () => {
           minPolarAngle={Math.PI / 2}
         />
         <Earth />
+
+        {/* Preload model to avoid runtime fetch stalls */}
+        {useGLTF.preload(ASSET_BASE + 'planet/scene.gltf')}
 
         <Preload all />
       </Suspense>
